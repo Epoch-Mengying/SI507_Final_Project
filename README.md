@@ -6,7 +6,7 @@
 
 ## Goal of the Project
 
-The goal of the project is to use Python to web scrape the machine learning courses from Coursera. 
+The goal of the project is to use Python to web scrape the machine learning courses from Coursera and store the data into database for query/management. There will also be an Excel Workbook for user to interact with. 
 
 ## Data Source
 Coursera homepage >> Catelog >> Data Science >> Machine Learning
