@@ -14,7 +14,9 @@ The goal of the project is to use python to get data from Yelp API on Ann Arbor'
 Yelp is an application that provides restaurants' information/reviews. It is supported by multiple languages and is widely used in many countries such as the U.S. and Japan. After users pick a location(and other possible criteria), Yelp will return satisfying restaurants search results. 
 
 Yelp @ Ann Arbor: https://www.yelp.com/search?find_desc=&find_loc=Ann+Arbor%2C+MI&ns=1
-Tool to get the data: Yelp Fusion API
+
+Tool to get the data: Yelp Fusion API, which uses OAuth 2.0 as Authentication.
+  * API documentation homepage: https://www.yelp.com/developers/documentation/v3/get_started
   * Search API documentation: https://www.yelp.com/developers/documentation/v3/business_search
   * Reviews API documentation: https://www.yelp.com/developers/documentation/v3/business_reviews
 
