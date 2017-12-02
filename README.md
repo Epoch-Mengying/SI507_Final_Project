@@ -50,7 +50,8 @@ There are two csv files that contain the information we have gained. Each csv's 
 
 --> Reviews API documentation: https://www.yelp.com/developers/documentation/v3/business_reviews
 
-**Note: This file only stores the three reviews returned by the API endpoints. At this time, the API does not return restaurants without any reviews. **
+
+**Note: This file only stores the three reviews returned by the API endpoints. At this time, the API does not return restaurants without any reviews.** 
 
 
 ### Database
