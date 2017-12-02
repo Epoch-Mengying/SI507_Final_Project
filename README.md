@@ -1,82 +1,91 @@
-# SI507 Final Project: Invesitigating Coursera's online Machine Learning Class
+# SI507 Final Project: Ann Arbor's Best Restaurants from Yelp
 
 
-> Machine learning courses focus on creating systems to utilize and learn from large sets of data. Topics of study include predictive algorithms, natural language processing, and statistical pattern recognition (from Coursera topic description).
+>  "Very very special brunch at local! It's definitely worth coming on new year's day!" 
+                                                             --- A Customer Review for The Boutique Cafe & Lounge from Yelp
 
 
 ## Goal of the Project
 
-The goal of the project is to use Python to web scrape the machine learning courses from Coursera and store the data into database for query/management. There will also be an Excel Workbook for user to interact with. 
+The goal of the project is to use python to get data from Yelp API on Ann Arbor's restaurants information and store the data into database for query/management. There will also be an interactive map built by Flask and Tableau for users to interact with. 
 
-## Data Source
-Coursera homepage >> Catelog >> Data Science >> Machine Learning
+## Data Source: Yelp
 
-Machine learning module is one of the three modules(Data Analysis, Michine Learning, Probabilities and Statistics)under Data Science category on Coursera. I chose this site becuase I myself have been a great beneficiary of the online open education and my academic focus is on machine learning. 
+Yelp is an application that provides restaurants' information/reviews. It is supported by multiple languages and is widely used in many countries such as the U.S. and Japan. After users pick a location(and other possible criteria), Yelp will return satisfying restaurants search results. 
 
-The web source of the data is:
-
-* Machine learning course catelog: https://www.coursera.org/browse/data-science/machine-learning?languages=en
-* Specialization course homepage: https://www.coursera.org/specializations/{specialization_name}
-   * eg. Deep Learning Specialization https://www.coursera.org/specializations/deep-learning
-
+Yelp @ Ann Arbor: https://www.yelp.com/search?find_desc=&find_loc=Ann+Arbor%2C+MI&ns=1
+Tool to get the data: Yelp Fusion API
+  * Search API documentation: https://www.yelp.com/developers/documentation/v3/business_search
+  * Reviews API documentation: https://www.yelp.com/developers/documentation/v3/business_reviews
 
 
 ## Outcome
 
 ### CSV files
 
-There are two csv files(potentially more, depends on the cnumber of specialization course) that contain the information we have scraped. Each csv's column names are provided below.
+There are two csv files that contain the information we have gained. Each csv's column names are provided below.
 
-* machine_learning_classes.csv
-  * course_title: the name of the course
-  * institution: university/other agencies that provided/taught the course
-  * num_courses_in_splz: number of courses in the specialization. If the course is not a specialization course(ie. a single course), the column will be left blank. Specilization means 
-  * course_page_URL: the website link that leads to the course homepage.
+* restaurants.csv (saves restaurant basic information on name, category, rating, price level and location)
+  * restaurant_name: the name of the restaurant
+  * category: which category the restaurant belongs to, eg. Coffee & Tea
+  * price_leve: range from $ to $$$$
+  * ratings: range from 1 to 5, on a 1/2 interval
+  * review_counts: total number of reviews
+  * state: the location of the restauant
+  * city
+  * street_address
+  * latitude
+  * longitude
   
---> Data Source: https://www.coursera.org/browse/data-science/machine-learning?languages=en
+--> Search API documentation: https://www.yelp.com/developers/documentation/v3/business_search
 
-**Note: this course list should not contain duplicate courses as what is currently presented on the website. In other words, if one course is already in one specialization, it should not be listed as a seperate class in this list.**
 
-* {Specialization_name}.csv
-   * course_name: course names which are listed in the learning path order
-   * num_weeks: how many weeks it should take to finish the course
-   * num_hours_per_week:  how many hours it should take to learn the material per week
-   * about: course description
+* reviews.csv
+   * restaurant_name: the name of the restaurant 
+   * reiview_1: one review of the customer
+   * review_2: one review of the customer
+   * review_3: one review of the customer
 
---> Data Source: https://www.coursera.org/specializations/{specialization}
+--> Reviews API documentation: https://www.yelp.com/developers/documentation/v3/business_reviews
+
+**Note: This file only stores the three reviews returned by the API endpoints. At this time, the API does not return restaurants without any reviews. **
 
 
 ### Database
 
 There will be three tables stored in the database:
 
-* Table1: Machine Learning Courses
+* Table1: Restaurants
   * id: PRIMARY KEY
-  * course title
-  * institution id: FOREIGN KEY points to Table3 Institutions(id)
-  * specialization id:  FOREIGN KEY points to Table2 Specialization(id)
-  * number of courses
-  * course page URL
+  * restaurant_name
+  * price_level
+  * ratings
+  * reviews_count
+  * logitude
+  * latitude
+  * category id: FOREIGN KEY points to Table2 Category(id)
+  * review id:  FOREIGN KEY points to Table3 Reviews(id)
   
   
-* Table2: Specialization
+* Table2: Categories
   * id: PRIMARY KEY
-  * course name
-  * number of weeks
-  * hours per week
-  * about
+  * category
   
-* Table3: Institutions
+* Table3: Reivews
   * id: PRIMARY KEY
-  * institution
+  * review_1
+  * review_2
+  * review_3
   
-### An Excel Workbook
-This workbook nicely incorporates all the information I gained in the project. It's user friendly and can act as a course catelog guide for you to play with. You can use this workbook to find the right machine learning course to take and easily navigate to that site!
+  
+### An Interactive Map
 
-The workbook has: 
-* a list of all machine learning courses on Coursera
-* different specialization courses with detailed course descriptions
-* URL that you can click on and directly navigates to the course homepage
+Unlike database, this interactive map allows the users to interact with all the restaurants' information we gained in this project! 
+
+Map is generated by Tableau, which will be displayed on the web. It shows all the restaurants on Yelp in Ann Arbor. User can click on any category to see the corresponding restaurants on the map. Upon hover over, it shows the details of the restaurant information. Point size indicates the number of ratings, with bigger size meaning more number of reviews, and point color indicates the average rating.
+
+Have fun!
+
 
     
 
