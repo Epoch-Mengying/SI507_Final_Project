@@ -127,6 +127,13 @@ The project is a bit completed. Here's **how to run the code**!
  python SI507F17_finalproject_tests.py
 ```
 
+ #### What you will see on your console after running the main code ...
+ You will see something like this:
+ 
+ ![sample console output](https://github.com/Epoch-Mengying/SI507_Final_Project/blob/master/Screenshot_Console.png)
+ 
+ Basically the message is telling you what the code is doing at each step! After reading this, you will have a clear idea of what's going on in the code!
+ 
  #### What you will get after running the main code...
  * cached json files
     * creds.json:  a json file containing your cached credentials
@@ -137,12 +144,14 @@ The project is a bit completed. Here's **how to run the code**!
     * restaurants.csv
     * reviews.csv
   
-  
+ As an example, you can see what I got for all the json and csv files in my repo(except creds.json)!
  #### What you can play with ...
  * **visualization.html**   <br/>
-  You can open this file in your browser and see the interactive map I have built using the restaurants' data we got!
+  You can open this file in your browser and see the interactive map I have built using the restaurants' data we got! <br/>
+  You will see something awesome like this: ![sample visualization page](https://github.com/Epoch-Mengying/SI507_Final_Project/blob/master/Screenshot_InteractionMap.png)
   
- #### Other files that I didn't mention:
+
+#### Other files that I didn't mention:
  * restaurants_yelp.twb   <br/>
   This is the original Tableau workbook I created to show the interactive map. If you are a data visualization person, feel free to play with it!
   
