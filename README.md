@@ -24,6 +24,8 @@ Tool to get the data: Yelp Fusion API, which uses OAuth 2.0 as Authentication.
 
 ## Outcome
 
+We will get information on 40 best restaurants in Ann Arbor ordered by some sorting function by Yelp(taking both review counts and ratings into account), plus the corresponding 3 review extracts for each restaurant we retrieved.
+
 ### CSV files
 
 There are two csv files that contain the information we have gained. Each csv's column names are provided below.
