@@ -1,0 +1,42 @@
+restaurant_id,restaurant_name,categories,price_level,ratings,review_counts,state,city,street_address,latitude,longitude
+casablanca-ypsilanti,Casablanca,"['Mediterranean', 'Moroccan', 'Middle Eastern']",$$,4.5,188,MI,Ypsilanti,2333 Washtenaw Rd,42.2486,-83.64943
+monahans-seafood-market-ann-arbor,Monahan's Seafood Market,"['Seafood', 'Seafood Markets']",$$,4.5,146,MI,Ann Arbor,407 N 5th Ave,42.2843246,-83.7460403
+the-lunch-room-ann-arbor-4,The Lunch Room,"['Vegan', 'Diners', 'Bars']",$$,4.5,322,MI,Ann Arbor,407 N 5th Ave,42.2845117547417,-83.7464183806924
+biercamp-ann-arbor,Biercamp,"['Meat Shops', 'Breweries', 'Hot Dogs']",$$,4.5,142,MI,Ann Arbor,1643 S State St,42.25849,-83.73975
+pilars-tamales-ann-arbor,Pilar's Tamales,['Latin American'],$,4.5,139,MI,Ann Arbor,2261 W Liberty St,42.2737867,-83.7777313
+juicy-kitchen-ann-arbor-3,Juicy Kitchen,"['Breakfast & Brunch', 'Gluten-Free', 'Coffee & Tea']",$$,4.5,220,MI,Ann Arbor,1506 N Maple Rd,42.2959222,-83.7808651
+frita-batidos-ann-arbor,Frita Batidos,"['Cuban', 'Burgers']",$$,4.0,1220,MI,Ann Arbor,117 W Washington St,42.2803651,-83.7491532
+neopapalis-ann-arbor,NeoPapalis,"['Salad', 'Pizza', 'Sandwiches']",$,4.5,243,MI,Ann Arbor,500 E William St,42.2775307,-83.7428818
+the-songbird-cafe-ann-arbor,The Songbird Cafe,"['Cafes', 'Sandwiches', 'Coffee & Tea']",$$,4.5,268,MI,Ann Arbor,2707 Plymouth Rd,42.3026624,-83.7068161
+mezes-greek-grill-ann-arbor,Mezes Greek Grill,"['Greek', 'Salad', 'Soup']",$,4.5,148,MI,Ann Arbor,715 N University Ave,42.27891,-83.74001
+mani-osteria-and-bar-ann-arbor,Mani Osteria & Bar,"['Italian', 'Pizza', 'Cocktail Bars']",$$,4.0,586,MI,Ann Arbor,341 E Liberty St,42.2795793749763,-83.744244702611
+broadway-cafe-and-hoagie-ann-arbor,Broadway Cafe & Hoagie,"['Korean', 'Steakhouses']",$,4.5,100,MI,Ann Arbor,1139 Broadway St,42.290602,-83.7367917
+zingermans-delicatessen-ann-arbor-2,Zingerman's Delicatessen,"['Delis', 'Breakfast & Brunch', 'Sandwiches']",$$,4.0,1615,MI,Ann Arbor,422 Detroit St,42.2844740041972,-83.7452775306885
+wolverine-state-brewing-co-ann-arbor-2,Wolverine State Brewing Co,"['Pubs', 'Breweries', 'Barbeque']",$$,4.5,159,MI,Ann Arbor,2019 W Stadium,42.2695,-83.77436
+ricewood-ann-arbor,Ricewood,"['Barbeque', 'Food Trucks']",$$,4.5,67,MI,Ann Arbor,1449 Jorn Ct,42.257678,-83.7281579
+chelas-ann-arbor,Chela's,"['Mexican', 'Gluten-Free']",$,4.5,259,MI,Ann Arbor,693 S Maple Rd,42.273675352335,-83.7799210846424
+eat-ann-arbor-2,eat,['American (New)'],$$,4.0,132,MI,Ann Arbor,1906 Packard St,42.2585802,-83.7286638
+tmaz-taqueria-ann-arbor,Tmaz Taqueria,"['Mexican', 'Food Delivery Services']",$,4.0,341,MI,Ann Arbor,3182 Packard St,42.2449934,-83.6965964
+syrian-cuisine-and-exotic-bakeries-ann-arbor,Syrian Cuisine & Exotic Bakeries,"['Middle Eastern', 'Bakeries', 'Syrian']",$,4.0,116,MI,Ann Arbor,1721 Plymouth Rd,42.298849718433,-83.721077020512
+chelas-ann-arbor-3,Chela's,"['Mexican', 'Breakfast & Brunch']",$,4.5,30,MI,Ann Arbor,307 S 5th Ave,42.27919,-83.74589
+westside-barbecue-ann-arbor,Westside Barbecue,['Barbeque'],$$,4.5,79,MI,Ann Arbor,108 E Madison St,42.27371,-83.74791
+pacific-rim-ann-arbor,Pacific Rim,['Asian Fusion'],$$$,4.0,366,MI,Ann Arbor,114 W Liberty St,42.27981,-83.74937
+sushi-town-ann-arbor,Sushi Town,['Sushi Bars'],$$,4.0,199,MI,Ann Arbor,740 Packard St,42.26962,-83.7398599
+isalita-ann-arbor,Isalita,['Mexican'],$$,4.0,384,MI,Ann Arbor,341 E Liberty St,42.2794618,-83.7444065
+everest-sherpa-restaurant-ann-arbor,Everest Sherpa Restaurant,"['Himalayan/Nepalese', 'Indian']",$$,4.5,53,MI,Ann Arbor,2803 Oak Valley Dr,42.2459715062184,-83.7690518386809
+haifa-falafel-ann-arbor,Haifa Falafel,"['Middle Eastern', 'Falafel']",$,4.0,292,MI,Ann Arbor,4585 Washtenaw Ave,42.252522,-83.667603
+cardamom-ann-arbor,Cardamom,['Indian'],$$,4.0,373,MI,Ann Arbor,1739 Plymouth Rd,42.298577940426,-83.7214592574346
+zamaan-cafe-ann-arbor-2,Zamaan Cafe,['Mediterranean'],$,4.0,98,MI,Ann Arbor,865 W Eisenhower Pkwy,42.2445919599101,-83.7583239535538
+jolly-pumpkin-cafe-and-brewery-ann-arbor-ann-arbor,Jolly Pumpkin Cafe & Brewery - Ann Arbor,"['Breweries', 'American (Traditional)']",$$,4.0,746,MI,Ann Arbor,311 S Main St,42.2788765570889,-83.7485352158546
+anthonys-gourmet-pizza-ann-arbor-3,Anthony's Gourmet Pizza,['Pizza'],$$,4.5,64,MI,Ann Arbor,1508 N Maple Rd,42.29563,-83.780918
+aventura-ann-arbor,Aventura,"['Tapas Bars', 'Spanish', 'Bars']",$$,4.0,501,MI,Ann Arbor,216 E Washington St,42.28026,-83.746473
+afternoon-delight-ann-arbor-2,Afternoon Delight,"['American (Traditional)', 'Breakfast & Brunch']",$$,4.0,295,MI,Ann Arbor,251 E Liberty St,42.2796135,-83.7467957
+the-chop-house-ann-arbor,The Chop House,['Steakhouses'],$$$$,4.0,319,MI,Ann Arbor,322 S Main St,42.2787453979254,-83.7487088888884
+belly-deli-ann-arbor,Belly Deli,"['Korean', 'Asian Fusion', 'Sandwiches']",$,4.0,138,MI,Ann Arbor,1317 S University Ave,42.2750398,-83.7328193
+caseys-tavern-ann-arbor,Casey's Tavern,"['Pubs', 'American (Traditional)']",$$,4.0,184,MI,Ann Arbor,304 Depot St,42.2878269029966,-83.7443678649288
+metzgers-german-restaurant-ann-arbor-2,Metzger's German Restaurant,"['German', 'American (New)', 'Seafood']",$$,4.0,170,MI,Ann Arbor,305 N Zeeb Rd,42.293025,-83.839377
+logan-restaurant-ann-arbor,Logan Restaurant,['American (New)'],$$$,4.0,208,MI,Ann Arbor,115 W Washington St,42.2802391052246,-83.7493438720703
+yee-siang-dumplings-ann-arbor,Yee Siang Dumplings,"['Chinese', 'Noodles', 'Vegetarian']",$,4.0,202,MI,Ann Arbor,4837 Washtenaw Ave,42.2510406278461,-83.6641938239336
+earthen-jar-ann-arbor,Earthen Jar,"['Vegetarian', 'Indian']",$,4.0,168,MI,Ann Arbor,311 S 5th Ave,42.2791,-83.74583
+taste-kitchen-ann-arbor,Taste Kitchen,"['Desserts', 'Seafood', 'Bars']",$$,4.0,131,MI,Ann Arbor,521 E Liberty St,42.2795716828378,-83.7423401932133
+avalon-cafe-and-kitchen-ann-arbor-2,Avalon Cafe and Kitchen,"['Cafes', 'Bakeries']",$$,4.0,137,MI,Ann Arbor,120 E Liberty St,42.2794143,-83.7482449
