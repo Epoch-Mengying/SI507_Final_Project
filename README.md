@@ -7,7 +7,7 @@
 
 ## Goal of the Project
 
-The goal of the project is to use python to get data from Yelp API on Ann Arbor's restaurants information and store the data into database for query/management. There will also be an interactive map built by Tableau and HTML for users to interact with. 
+The goal of the project is to use python to get data from Yelp API on Ann Arbor's restaurants information(**Note: only 40 restaurants can be returned at this point.**) and store the data into database for query/management. There will also be an interactive map built by Tableau and HTML for users to interact with. 
 
 ## Data Source: Yelp
 
@@ -94,15 +94,61 @@ Have fun!
 
 ## Instructions
 The project is a bit completed. Here's **how to run the code**!
-### Step 1: Create your own application on Yelp!
- [1] Go to Yelp API documentation: https://www.yelp.com/developers/documentation/v3
- [2] Click on Create App at left under General
- [3] Check your client_ID and client_secret here: https://www.yelp.com/developers/v3/manage_app
-     Note, as this code uses OAuth 2.0, your don't need to worry about API key!
+#### Step 1: Create your own application on Yelp!
+ [1] Go to Yelp API documentation: https://www.yelp.com/developers/documentation/v3 <br/>
+ [2] Click on Create App at left under General <br/>
+ [3] Check your client_ID and client_secret here: https://www.yelp.com/developers/v3/manage_app <br/>
+     Note, as this code uses OAuth 2.0, your don't need to worry about API key! <br/>
  [4] Fill in your client_ID and client_secret in **secret_data_sample.py** and rename it to **secret_data.py**
 
-### Step 2: Changing the database user name to yours!
- [1] Open **config.py** and change it to your own user name! You don't need to change the database name.
+#### Step 2: Changing the database user name to yours!
+ [1] Open **config.py** and change it to your own user name! You don't need to change the database name.<br/>
+ [2] Make sure you have all the database pre-installs.
+ 
+#### Step 3: Create a virtual environment and pip install everything!
+ [1] Create a virtual environment named "venv" and activate it by <br/>
+```
+ virtualenv --python=python3 venv
+ source venv/bin/activate
+```
+ [2] Pip install the required libraries from **requirements.txt** using <br/>
+```
+ pip install -r requirements.txt
+```
+ #### Step 4: Run the main code inside your virtual environment!
+ ```
+ python SI507F17_finalproject.py
+```
+
+ #### [Optional] Run the test case inside your virtual environment!
+ ```
+ python SI507F17_finalproject_tests.py
+```
+
+ #### What you will get after running the main code...
+ * cached json files
+    * creds.json:  a json file containing your cached credentials
+    * cache_contents.json: a json file containing your cached restaurants information. 
+    * reviews.json: a json file containing your cached restaurants' reviews information.
+  
+ * csv files
+    * restaurants.csv
+    * reviews.csv
+  
+  
+ #### What you can play with ...
+ * **visualization.html**   <br/>
+  You can open this file in your browser and see the interactive map I have built using the restaurants' data we got!
+  
+ #### Other files that I didn't mention:
+ * restaurants_yelp.twb   <br/>
+  This is the original Tableau workbook I created to show the interactive map. If you are a data visualization person, feel free to play with it!
+  
+ * sample_3restaurants.py   <br/>
+ This is the sample data format retrieved from Yelp Search API. This file is for test only.
+ 
+ * database.py   <br/>
+ This file deals with all the postgres and is imported in our main code file SI507F17_finalproject.py. So you don't need to worry about it!
 
 
 
