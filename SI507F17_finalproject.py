@@ -18,7 +18,7 @@ import secret_data # Go to secret_data_sample.py and follow the instructions!
 
 CLIENT_ID = secret_data.client_ID
 CLIENT_SECRET = secret_data.client_secret
-i = 3
+
 # API constants, you shouldn't have to change these.
 API_HOST = 'https://api.yelp.com'
 SEARCH_PATH = '/v3/businesses/search'
@@ -143,7 +143,7 @@ def set_in_cache(dict_data, cache_file_name):
        Upon execute, this will write data on the cache file.
     
     """
-    print("Getting new data and Setting cache file in {}...".format(cache_file_name))
+    print("Setting cache file in {}...".format(cache_file_name))
     
     with open(cache_file_name, 'w') as cache_file:
         cache_json = json.dumps(dict_data)
@@ -180,17 +180,17 @@ def get_data(cache_file_name, identifier = "restaurants", refresh = "No", creden
     if(refresh == "No"):
         # Load the data from cache file
         try:
-            print("Getting data from {}...".format(cache_file_name))
             with open(cache_file_name, 'r') as cache_file:
                 cache_json = cache_file.read()
                 data_diction = json.loads(cache_json)
+                print("Getting data from {}...".format(cache_file_name))
         except:
-            print("No contents found.")
             data_diction = {}
     
         # If not in the cache file, get data from API and set into cache
         if(identifier == "credentials" and not data_diction):
             # get bearer_roken
+            print("Obtaining credentials ...")
             bearer_token = obtain_bearer_token(API_HOST, TOKEN_PATH)
             bearer_token_dict = {"token": bearer_token}
             
@@ -203,6 +203,7 @@ def get_data(cache_file_name, identifier = "restaurants", refresh = "No", creden
                 print ("**Error: Obtain your credentials first and retreive restaurants data.")
                 exit()
             # get the data using CREDS_DICTION
+            print("Getting data from Search APIs...")
             search_result = search_api(credential["token"])
             
             # set in cache file
@@ -214,6 +215,7 @@ def get_data(cache_file_name, identifier = "restaurants", refresh = "No", creden
                 print ("**Error: Obtain your credentials and restaurants data first and retreive reviews data.")
                 exit() 
             # save all restaurant id in list
+            print("Getting data from Review APIs...")
             ids = []
             businesses = cache["businesses"]
             for business in businesses:
@@ -237,6 +239,7 @@ def get_data(cache_file_name, identifier = "restaurants", refresh = "No", creden
                 os.remove(cache_file_name)
             
             # get bearer_roken
+            print("Obtaining credentials ...")
             bearer_token = obtain_bearer_token(API_HOST, TOKEN_PATH)
             bearer_token_dict = {"token": bearer_token}
             # set in cache file
@@ -251,6 +254,7 @@ def get_data(cache_file_name, identifier = "restaurants", refresh = "No", creden
                 print ("**Error: Obtain your credentials first and retreive restaurants data.")
                 exit()
             # get the data
+            print("Getting data from Search APIs...")
             search_result = search_api(credential["token"])
             
             # set in cache file
@@ -266,6 +270,7 @@ def get_data(cache_file_name, identifier = "restaurants", refresh = "No", creden
                 print ("**Error: Obtain your credentials and restaurants data first and retreive reviews data.")
                 exit() 
             # save all restaurant id in list
+            print("Getting data from Review APIs, please wait...")
             ids = []
             businesses = cache["businesses"]
             for business in businesses:
@@ -376,10 +381,12 @@ class Restaurant(object):
 
 #if __name__ == '__main__':
 print ("**Process started**")
+
 # Check if client_id and client_secret has been filled
 if not CLIENT_ID or not CLIENT_SECRET:
     print("Please provide Client ID and Client SECRET in secret_data_sample.py")
     exit()
+
 
 # Set up for cache file name
 CREDS_CACHE_FNAME = "creds.json" # a cache file to save the credentials, ie, all the tokens
@@ -388,11 +395,11 @@ REVIEWS_FNAME = "reviews.json" # a cache file to save the reviews on Ann Arbor's
 
 
 # Get credentials data, restaurants data and reviews data
-CREDS_DICTION = get_data(CREDS_CACHE_FNAME, identifier = "credentials", refresh = "No") # a python dictionary to store credential data
+CREDS_DICTION = get_data(CREDS_CACHE_FNAME, identifier = "credentials", refresh = "Yes") # a python dictionary to store credential data
 
-CACHE_DICTION = get_data(CACHE_FNAME, identifier = "restaurants", refresh = "No", credential = CREDS_DICTION) # a python dictionary to store  restaurants data
+CACHE_DICTION = get_data(CACHE_FNAME, identifier = "restaurants", refresh = "Yes", credential = CREDS_DICTION) # a python dictionary to store  restaurants data
 
-REVIEWS_DICTION = get_data(REVIEWS_FNAME, identifier = "reviews", refresh = "No", credential = CREDS_DICTION, cache = CACHE_DICTION) # a python dictionary to store reviews data 
+REVIEWS_DICTION = get_data(REVIEWS_FNAME, identifier = "reviews", refresh = "Yes", credential = CREDS_DICTION, cache = CACHE_DICTION) # a python dictionary to store reviews data 
 
 
 # Create restaurant object for each restaurant retrieved in CACHE_DICTION, and save all in a list
@@ -401,6 +408,7 @@ businesses = CACHE_DICTION["businesses"]
 for business in businesses:
     rest_obj = Restaurant(business)
     ann_arbor_restaurants.append(rest_obj)
+
 
 # Write each restaurant's information on restaurants.csv file
 REST_CSV_FNAME = "restaurants.csv"
